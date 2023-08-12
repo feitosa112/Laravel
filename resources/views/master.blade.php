@@ -11,7 +11,8 @@
 </head>
 <body>
     @yield('main')
-@include('footer')
+@extends('footer')
 
 </body>
+
 </html>
