@@ -15,4 +15,21 @@ class ContactController extends Controller
         $allContacts = ContactModel::all();
         return view('allContacts',compact("allContacts"));
     }
+
+    public function sendContact(Request $request){
+        $request->validate([
+            "email"=>"required|string",
+            "subject"=>"required|string",
+            "description"=>"required|string|min:5"
+        ]);
+        echo "Email:".$request->get('email').''.'Naslov:'.$request->get('subject').''.$request->get('description');
+
+        ContactModel::create([
+            "email"=>$request->get('email'),
+            "subject"=>$request->get('subject'),
+            "message"=>$request->get('description')
+        ]);
+
+        return redirect("/shop");
+    }
 }

@@ -15,4 +15,7 @@ class shopController extends Controller
         // ];
         return view('shop',compact("products"));
     }
+    public function addProduct(){
+        return view('admin/add-product');
+    }
 }

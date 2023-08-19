@@ -1,0 +1,6 @@
+Napraviti stranicu "/admin/add-product"
+    *Prikazati formu za dodavanje prozivoda sa svim poljima iz baze,
+    *Napraviti logiku za snimanje tih podataka u tabelu "products",
+    *Validacija podataka,prikazivanje gresaka,
+Napraviti stranicu "/admin/products
+*Prikazati sve proizvode iz baze i sve njihove informacije u HTML tabeli

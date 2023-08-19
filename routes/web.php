@@ -14,5 +14,8 @@ Route::get('/contact',[\App\Http\Controllers\ContactController::class,'index']);
 Route::get('/shop',[\App\Http\Controllers\ShopController::class,'index']);
 
 Route::get('/admin/all-contacts',[\App\Http\Controllers\ContactController::class,'getAllContacts']);
+Route::get("admin/add-product",[\App\Http\Controllers\shopController::class,'addProduct']);
+
+Route::post('/send-contact',[\App\Http\Controllers\ContactController::class,'sendContact']);
 
 

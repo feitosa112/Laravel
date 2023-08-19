@@ -15,6 +15,9 @@
         <li class="nav-item">
             <a href="/contact" class="nav-link">Contact</a>
         </li>
+        <li class="nav-item">
+          <a href="/admin/add-product" class="nav-link">Add Product</a>
+        </li>
         
         
       </ul>
