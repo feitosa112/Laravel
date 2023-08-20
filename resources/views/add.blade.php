@@ -10,8 +10,14 @@ Add product
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <form action="">
-                <input type="text" class="form-control"name="name" placeholder="Name"><br>
+            <form action="/add" method="POST" enctype="multipart/form-data">
+                @if ($errors->any())
+                        
+                <p>{{$errors->first()}}</p>
+                    
+                @endif
+                @csrf
+                <input type="text" class="form-control" name="name" placeholder="Name"><br>
                 <input type="number"class="form-control" name="amount" placeholder="Amount"><br>
                 <input type="number"class="form-control" name="price" placeholder="Price"><br>
                 <input type="file"name="image" class="form-control"><br>
