@@ -15,14 +15,12 @@ class shopController extends Controller
         // ];
         return view('shop',compact("products"));
     }
-    public function addProduct(Request $request){
-       
-        if($request->hasFile("image")){
-            $image = $request->file("image");
-            $image_name = time().'1.'.$image->extension();
-            $image->move(public_path('ad_images'),$image_name);
-        }
 
+    public function addView(){
+        return view('add');
+    }
+    public function addProduct(Request $request){
+        
         $request->validate([
 
             "name"=>"required|string",
@@ -32,6 +30,15 @@ class shopController extends Controller
             "image"=>"mimes:jpg,jpeg,png"
 
            ]);
+       
+       
+        if($request->hasFile("image")){
+            $image = $request->file("image");
+            $image_name = time().'1.'.$image->extension();
+            $image->move(public_path('/ad_images'),$image_name);
+        }
+
+        
 
 
         Product::create([
@@ -44,6 +51,6 @@ class shopController extends Controller
 
 
         ]);
-        return view("/shop");
+        return redirect("/shop");
     }
 }

@@ -16,7 +16,11 @@
             <a href="/contact" class="nav-link">Contact</a>
         </li>
         <li class="nav-item">
-          <a href="/add" class="nav-link">Add Product</a>
+          <a href="/admin/add-products" class="nav-link">Add Product</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/admin/all-products" class="nav-link">All products</a>
         </li>
         
         

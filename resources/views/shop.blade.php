@@ -7,6 +7,7 @@ Shop page
 @section('main')
 
     @section('main')
+   
     <h1 class="display-4">All products</h1>
     <div class="container">
         <div class="row">

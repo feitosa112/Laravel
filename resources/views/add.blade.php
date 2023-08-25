@@ -10,7 +10,12 @@ Add product
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
-            <form action="/add" method="POST" enctype="multipart/form-data">
+            @foreach($errors->all() as $error)
+
+            <p>{{$error}}</p>
+    
+            @endforeach
+            <form action="add-product" method="POST" enctype="multipart/form-data">
                 @if ($errors->any())
                         
                 <p>{{$errors->first()}}</p>
@@ -20,10 +25,11 @@ Add product
                 <input type="text" class="form-control" name="name" placeholder="Name"><br>
                 <input type="number"class="form-control" name="amount" placeholder="Amount"><br>
                 <input type="number"class="form-control" name="price" placeholder="Price"><br>
-                <input type="file"name="image" class="form-control"><br>
+                <input type="file" name="image" class="form-control"><br>
                 <textarea name="description" id="" cols="30" rows="10"class="form-control" placeholder="Description"></textarea><br>
                 <button class="btn btn-success form-control" name="saveProduct" type="submit">Save</button>
             </form>
+            
         </div>
     </div>
 </div>
