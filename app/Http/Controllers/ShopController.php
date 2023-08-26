@@ -51,6 +51,6 @@ class shopController extends Controller
 
 
         ]);
-        return redirect("/shop");
+        return redirect("/shop")->with('createProduct','You have successfully entered a new product');
     }
 }

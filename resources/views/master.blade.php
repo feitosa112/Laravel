@@ -10,8 +10,9 @@
     
 </head>
 <body>
-    @yield('main')
     @include('flash-messages')
+
+    @yield('main')
 @extends('footer')
 
 </body>

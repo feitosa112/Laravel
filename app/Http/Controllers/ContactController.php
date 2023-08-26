@@ -31,7 +31,7 @@ class ContactController extends Controller
             "message"=>$request->get('description')
         ]);
 
-        return redirect("/shop");
+        return redirect("/shop")->with("sendMsg","You have successfully sent the message");
     }
 
     public function delete($contact){
@@ -41,6 +41,6 @@ class ContactController extends Controller
         }else{
             $singleContact->delete();
         }
-        return redirect()->back()->with('delete','Contact delete!!!');
+        return redirect()->back()->with('delete','Contact deleted!!!');
     }
 }

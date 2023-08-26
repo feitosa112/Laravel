@@ -15,7 +15,7 @@ Add product
             <p>{{$error}}</p>
     
             @endforeach
-            <form action="add-product" method="POST" enctype="multipart/form-data">
+            <form action="/add-product" method="POST" enctype="multipart/form-data">
                 @if ($errors->any())
                         
                 <p>{{$errors->first()}}</p>

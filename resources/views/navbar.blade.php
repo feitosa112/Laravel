@@ -12,9 +12,7 @@
         <li class="nav-item">
           <a class="nav-link mr-1" href="/shop">Shop</a>
         </li>
-        <li class="nav-item">
-            <a href="/admin/all-contacts" class="nav-link">All contacts</a>
-        </li>
+
         <li class="nav-item">
           <a href="/admin/add-products" class="nav-link">Add Product</a>
         </li>
@@ -22,6 +20,13 @@
         <li class="nav-item">
           <a href="/admin/all-products" class="nav-link">All products</a>
         </li>
+
+
+        <li class="nav-item">
+            <a href="/admin/all-contacts" class="nav-link">All contacts</a>
+        </li>
+
+       
         
         
       </ul>

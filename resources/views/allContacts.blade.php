@@ -14,7 +14,7 @@ AllContact
         <th scope="col">Email</th>
         <th scope="col">Subject</th>
         <th scope="col">Message</th>
-        <th>Actions</th>        
+        <th scope="col">Actions</th>        
       </tr>
     </thead>
     <tbody>
@@ -25,7 +25,7 @@ AllContact
             <td>{{$single->subject}}</td>
             <td>{{$single->message}}</td>
             <td>
-              <a href="{{ route('delete', ['contact'=>$single->id]) }}" class="badge badge-danger badge-sm">Obrisi</a>
+              <a href="{{ route('deleteContact', ['contact'=>$single->id]) }}" class="badge badge-danger badge-sm">Obrisi</a>
               <a href=""class="badge badge-warning badge-sm">Edituj</a>
 
             </td>

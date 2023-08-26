@@ -20,7 +20,7 @@ Route::get('/admin/all-products',[\App\Http\Controllers\ProductsController::clas
 Route::post("/add-product",[\App\Http\Controllers\ShopController::class,'addProduct']);
 Route::get("/admin/add-products",[\App\Http\Controllers\ShopController::class,"addView"]);
 Route::get("admin/delete-product/{product}",[\App\Http\Controllers\ProductsController::class,'delete']);
-Route::get("admin/delete-contact/{contact}",[\App\Http\Controllers\ContactController::class,'delete'])->name('delete');
+Route::get("admin/delete-contact/{contact}",[\App\Http\Controllers\ContactController::class,'delete'])->name('deleteContact');
 
 
 Route::post('/send-contact',[\App\Http\Controllers\ContactController::class,'sendContact']);
