@@ -10,23 +10,21 @@ Add product
 <div class="container">
     <div class="row">
         <div class="col-8 offset-2">
+            @if ($errors->any())
             @foreach($errors->all() as $error)
 
-            <p>{{$error}}</p>
+            <p style="color: red">{{$error}}</p>
     
             @endforeach
-            <form action="/add-product" method="POST" enctype="multipart/form-data">
-                @if ($errors->any())
-                        
-                <p>{{$errors->first()}}</p>
-                    
-                @endif
+            @endif
+            
+            <form action="{{route('saveProduct')}}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="text" class="form-control" name="name" placeholder="Name"><br>
-                <input type="number"class="form-control" name="amount" placeholder="Amount"><br>
-                <input type="number"class="form-control" name="price" placeholder="Price"><br>
-                <input type="file" name="image" class="form-control"><br>
-                <textarea name="description" id="" cols="30" rows="10"class="form-control" placeholder="Description"></textarea><br>
+                <input type="text" class="form-control" name="name" value="{{old("name")}}" placeholder="Name"><br>
+                <input type="number"class="form-control" name="amount" value="{{old("amount")}}" placeholder="Amount"><br>
+                <input type="number"class="form-control" name="price" value="{{old("price")}}" placeholder="Price"><br>
+                <input type="file" name="image" value="{{old("image")}}" class="form-control"><br>
+                <textarea name="description" value="{{old("description")}}" id="" cols="30" rows="10"class="form-control" placeholder="Description"></textarea><br>
                 <button class="btn btn-success form-control" name="saveProduct" type="submit">Save</button>
             </form>
             

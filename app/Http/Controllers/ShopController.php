@@ -13,17 +13,16 @@ class shopController extends Controller
         // $products = [
         //     "iPhone 14","Samsung A52s","Samsung A30", "iPhone 13 pro"
         // ];
+        
         return view('shop',compact("products"));
     }
 
-    public function addView(){
-        return view('add');
-    }
+    
     public function addProduct(Request $request){
         
         $request->validate([
 
-            "name"=>"required|string",
+            "name"=>"required|string|unique:products",
             "description"=>"required|string|min:10",
             "amount"=>"required|numeric",
             "price"=>"required|numeric",

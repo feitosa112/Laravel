@@ -25,8 +25,8 @@ AllProducts
             <td>{{$single->price}}</td>
             <td>{{$single->amount}}</td>
             <td>
-              <a href="/admin/delete-product/{{$single->id}}" class="badge badge-danger badge-sm">Obrisi</a>
-              <a href=""class="badge badge-warning badge-sm">Edituj</a>
+              <a href="{{route('deleteProduct',['product'=>$single->id])}}" class="badge badge-danger badge-sm">Obrisi</a>
+              <a href="{{route('editProduct',['productId'=>$single->id])}}"class="badge badge-warning badge-sm">Edituj</a>
 
             </td>
           </tr>

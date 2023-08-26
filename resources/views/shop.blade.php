@@ -14,6 +14,10 @@ Shop page
             <div class="col-4 offset-4">
                 @foreach ($products as $product)
                     <div class="card" style="background-color:darkcyan">
+                        <div class="card-preheader">
+                            <img src="ad_images/{{$product->image}}" style="height: 200px;width:349px" alt="">
+
+                        </div>
                         <div class="card-header">
                             <p style="color: darkorange;font-size:22px">
                                 @if ($product->name=="iPhone 14" || $product->name=="iPhone 13 pro")

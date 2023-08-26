@@ -26,7 +26,7 @@ AllContact
             <td>{{$single->message}}</td>
             <td>
               <a href="{{ route('deleteContact', ['contact'=>$single->id]) }}" class="badge badge-danger badge-sm">Obrisi</a>
-              <a href=""class="badge badge-warning badge-sm">Edituj</a>
+              <a href="{{route('editContact',['contactId'=>$single->id])}}"class="badge badge-warning badge-sm">Edituj</a>
 
             </td>
           </tr>
