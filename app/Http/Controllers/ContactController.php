@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactModel;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -12,8 +13,8 @@ class ContactController extends Controller
     }
 
     public function getAllContacts(){
-        $allContacts = ContactModel::all();
-        return view('allContacts',compact("allContacts"));
+        $all = ContactModel::all();
+        return view('allContacts',compact("all"));
     }
 
     public function sendContact(Request $request){
@@ -31,5 +32,15 @@ class ContactController extends Controller
         ]);
 
         return redirect("/shop");
+    }
+
+    public function delete($contact){
+        $singleContact = ContactModel::where(['id'=>$contact])->first();
+        if($singleContact==null){
+            echo "Ovaj contact ne postoji";
+        }else{
+            $singleContact->delete();
+        }
+        return redirect()->back();
     }
 }

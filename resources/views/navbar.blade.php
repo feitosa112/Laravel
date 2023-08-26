@@ -13,7 +13,7 @@
           <a class="nav-link mr-1" href="/shop">Shop</a>
         </li>
         <li class="nav-item">
-            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/admin/all-contacts" class="nav-link">All contacts</a>
         </li>
         <li class="nav-item">
           <a href="/admin/add-products" class="nav-link">Add Product</a>

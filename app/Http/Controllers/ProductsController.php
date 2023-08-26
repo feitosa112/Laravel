@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index(){
-        $allProducts = Product::all();
-        return view('allProducts',compact("allProducts"));
+        $all = Product::all();
+        return view('allProducts',compact("all"));
     }
 
     public function delete($product){

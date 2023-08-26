@@ -18,14 +18,14 @@ AllProducts
       </tr>
     </thead>
     <tbody>
-        @foreach ($allProducts as $product)
+        @foreach ($all as $single)
         <tr>
-            <th scope="row">{{$product->id}}</th>
-            <td>{{$product->name}}</td>
-            <td>{{$product->price}}</td>
-            <td>{{$product->amount}}</td>
+            <th scope="row">{{$single->id}}</th>
+            <td>{{$single->name}}</td>
+            <td>{{$single->price}}</td>
+            <td>{{$single->amount}}</td>
             <td>
-              <a href="/admin/delete-product/{{$product->id}}" class="badge badge-danger badge-sm">Obrisi</a>
+              <a href="/admin/delete-product/{{$single->id}}" class="badge badge-danger badge-sm">Obrisi</a>
               <a href=""class="badge badge-warning badge-sm">Edituj</a>
 
             </td>
