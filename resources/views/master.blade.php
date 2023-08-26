@@ -11,6 +11,7 @@
 </head>
 <body>
     @yield('main')
+    @include('flash-messages')
 @extends('footer')
 
 </body>

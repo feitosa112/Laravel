@@ -20,6 +20,6 @@ class ProductsController extends Controller
         }else{
             $singleProduct->delete();
         }
-        return redirect()->back();
+        return redirect()->back()->with('deleteProduct','Product delete!!');
     }
 }

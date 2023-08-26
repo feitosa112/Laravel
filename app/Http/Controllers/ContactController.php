@@ -41,6 +41,6 @@ class ContactController extends Controller
         }else{
             $singleContact->delete();
         }
-        return redirect()->back();
+        return redirect()->back()->with('delete','Contact delete!!!');
     }
 }
