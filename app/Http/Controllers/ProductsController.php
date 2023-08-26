@@ -12,4 +12,14 @@ class ProductsController extends Controller
         $allProducts = Product::all();
         return view('allProducts',compact("allProducts"));
     }
+
+    public function delete($product){
+        $singleProduct = Product::where(['id'=>$product])->first();
+        if($singleProduct==null){
+            echo "Ovaj proizvod ne postoji";
+        }else{
+            $singleProduct->delete();
+        }
+        return redirect()->back();
+    }
 }

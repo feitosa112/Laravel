@@ -13,7 +13,8 @@ AllProducts
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Price</th>
-        <th scope="col">Amount</th>        
+        <th scope="col">Amount</th>
+        <th>Actions</th>        
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,11 @@ AllProducts
             <td>{{$product->name}}</td>
             <td>{{$product->price}}</td>
             <td>{{$product->amount}}</td>
+            <td>
+              <a href="/admin/delete-product/{{$product->id}}" class="badge badge-danger badge-sm">Obrisi</a>
+              <a href=""class="badge badge-warning badge-sm">Edituj</a>
+
+            </td>
           </tr>
         @endforeach
     </tbody>
