@@ -22,10 +22,10 @@ Route::view("/admin/add-products",'add');
 Route::get("admin/delete-product/{product}",[\App\Http\Controllers\ProductsController::class,'delete'])->name('deleteProduct');
 Route::get("admin/delete-contact/{contact}",[\App\Http\Controllers\ContactController::class,'delete'])->name('deleteContact');
 
-Route::get("admin/edit-product/{productId}",[\App\Http\Controllers\ProductsController::class,'edit'])->name('editProduct');
-Route::post('/admin/update/{id}', [App\Http\Controllers\ProductsController::class, 'update'])->name('updateProduct');
+Route::get("/admin/edit-product/{productId}",[\App\Http\Controllers\ProductsController::class,'edit'])->name('editProduct');
+Route::post('/admin/update-product/{id}', [App\Http\Controllers\ProductsController::class, 'update'])->name('updateProduct');
 
-Route::get("admin/edit-contact/{contactId}",[\App\Http\Controllers\ContactController::class,'edit'])->name('editContact');
+Route::get("/admin/edit-contact/{contactId}",[\App\Http\Controllers\ContactController::class,'edit'])->name('editContact');
 Route::post('/admin/update/{id}', [App\Http\Controllers\ContactController::class, 'update'])->name('updateContact');
 
 

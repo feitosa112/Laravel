@@ -27,6 +27,9 @@ class ProductsController extends Controller
 
     public function edit($productId){
         $product = Product::find($productId);
+        if($product == null){
+            echo "Proizvod ne postoji!";
+        }
         return view('edit-product',[
             'product'=>$product
         ]);
@@ -43,7 +46,7 @@ class ProductsController extends Controller
             'name'=>'required|string',
             'price'=>'required|numeric',
             'amount'=>'required|numeric',
-            'image'=>'mimes:jpg,jpeg,png|required',
+            'image'=>'mimes:jpg,jpeg,png',
             
 
         ]);
